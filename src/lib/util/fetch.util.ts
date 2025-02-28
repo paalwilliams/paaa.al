@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { GITHUB_API_BASE } from './constants';
 
 export type GithubApiResponse = {
 	name: string;
@@ -16,9 +17,12 @@ export type GithubApiResponse = {
 		html: string;
 	};
 };
+
 export const getBlogPosts = async () => {
-	const { data } = await axios.get<GithubApiResponse[]>(
-		'https://api.github.com/repos/paalwilliams/blog-posts/contents/'
-	);
+	const { data } = await axios.get<GithubApiResponse[]>(`${GITHUB_API_BASE}/blog-posts/contents/`);
 	return data.filter((entry) => entry.type != 'dir');
+};
+
+export const getBlogPost = async (path: string) => {
+	return axios.get(`https://raw.githubusercontent.com/paalwilliams/blog-posts/main/${path}`);
 };
