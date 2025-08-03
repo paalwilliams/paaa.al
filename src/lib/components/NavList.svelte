@@ -1,19 +1,20 @@
 <script>
-	import { page } from '$app/state';
+	import { page } from '$app/stores';
 	import ListItem from './ListItem.svelte';
 
-	$: post = page.url.searchParams.get('post');
+	$: post = $page.url.searchParams.get('post');
 
-	const links = [
-		{
-			path: '/',
-			label: '~/'
-		},
-		{
-			path: '/blog',
-			label: 'blog/',
-			suffix: post
-		}
+	$: links = [
+			{
+				path: '/',
+				label: '~/',
+				suffix: null
+			},
+			{
+				path: '/blog',
+				label: "blog/",
+				suffix: post
+			}
 	];
 
 

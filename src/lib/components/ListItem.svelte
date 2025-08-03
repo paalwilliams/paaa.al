@@ -6,7 +6,7 @@ export let suffix: undefined | string | null = undefined;
 </script>
 
 <li class="listItem">
-	<a href={path}>{label}{suffix}</a>
+	<a href={path}>{label}</a><span>{suffix ? suffix : ""}</span>
 </li>
 
 <style> 
@@ -15,13 +15,14 @@ export let suffix: undefined | string | null = undefined;
 		padding-right: 20px;
 		padding-left: 20px;
 		list-style: none;
+
+			font-size: 50px;
 		& a {
-			font-size: 50px
+			& :hover {
+					font-style: italic;
+			}
 		}
 
-		& :hover {
-				font-style: italic;
-			}
 	}
 
 </style>

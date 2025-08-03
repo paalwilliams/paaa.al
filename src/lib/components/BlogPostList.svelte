@@ -2,7 +2,6 @@
 	import { type ComponentProps } from 'svelte';
 	import ListItem from "./ListItem.svelte";
 	type ListItemProps = ComponentProps<ListItem>
-
 	export let listItems: ListItemProps[]
 </script>
 
