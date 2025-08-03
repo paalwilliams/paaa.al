@@ -1,8 +1,27 @@
 <script lang="ts">
-	export let path: string;
-	export let label: string;
+// let {path, label} : {path: string, label: string } = $props()
+export let path: string;
+export let label: string;
+export let suffix: undefined | string | null = undefined;
 </script>
 
-<li class="px-4 hover:italic">
-	<a class="text-6xl p-0 m-0" href={path}>{label}/</a>
+<li class="listItem">
+	<a href={path}>{label}{suffix}</a>
 </li>
+
+<style> 
+
+	.listItem {
+		padding-right: 20px;
+		padding-left: 20px;
+		list-style: none;
+		& a {
+			font-size: 50px
+		}
+
+		& :hover {
+				font-style: italic;
+			}
+	}
+
+</style>

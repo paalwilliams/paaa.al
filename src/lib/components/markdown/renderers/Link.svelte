@@ -1,10 +1,6 @@
-
 <script lang="ts">
-    export let href: string;
-    export let text: string;
-    console.log({href, text})
+	export let href: string;
+	export let text: string;
 </script>
 
-
-
-<a href={href}> {text}</a>
+<a {href}> {text}</a>

@@ -1,5 +1,15 @@
 <script>
-	import HeaderList from './HeaderList.svelte';
+	import NavList from './NavList.svelte';
 </script>
 
-<HeaderList />
+<header class="header"> 
+	<NavList />
+</header>
+<style>
+	.header {
+	  display: flex;
+	  padding: 10px;
+	  border: 2px solid black;
+	  height: 80px
+	}
+</style>
