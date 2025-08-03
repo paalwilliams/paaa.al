@@ -2,9 +2,7 @@
 	<p class="text-center">Paal Williams</p>
 	<p class="text-center">Software Engineer @ Doctolib</p>
 	<p class="text-center underline hover:italic">
-		<a href="mailto:unique.username.secure.password@proton.me" target="_top"
-			>paalwilliams@gmail.com</a
-		>
+		<a href="mailto:paaa.al@proton.me" target="_top">paaa.al@proton.me</a>
 	</p>
 	<p class="text-center">Berlin, DE</p>
 </section>

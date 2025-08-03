@@ -1,7 +1,6 @@
 <script lang="ts">
   export let text: string
   export let depth: number 
-  const {text, depth} = $props()
 </script>
 {#if depth === 1}
 <h1 class="text-8xl">{text}</h1>
